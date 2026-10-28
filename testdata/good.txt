@@ -1,0 +1,18 @@
+# FastWidget
+
+> FastWidget is a Go library for rendering widgets quickly. This file points language models at its docs.
+
+Widgets are immutable; build a new one instead of mutating it.
+
+## Docs
+
+- [Quick start](https://fastwidget.dev/docs/start.md): install and render your first widget
+- [API reference](https://fastwidget.dev/docs/api.md)
+
+## Examples
+
+- [Dashboard](https://fastwidget.dev/examples/dashboard.md): a full dashboard in 40 lines
+
+## Optional
+
+- [Changelog](https://fastwidget.dev/changelog.md)

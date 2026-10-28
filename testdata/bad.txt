@@ -1,0 +1,19 @@
+Welcome to our docs!
+# Acme
+
+## Guides
+
+- [Install](/install.html)
+- [Install again](/install.html)
+- Setup guide: https://acme.dev/setup
+Some loose paragraph here.
+
+## Optional
+
+- [Blog](http://acme.dev/blog.md)
+
+## API
+
+### Endpoints
+- [](https://acme.dev/api.md)
+## Empty
