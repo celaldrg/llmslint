@@ -1,14 +1,24 @@
-# llmslint
+<p align="center">
+  <img src="assets/banner.webp" alt="llmslint" width="100%">
+</p>
 
-[![CI](https://github.com/celaldrg/llmslint/actions/workflows/ci.yml/badge.svg)](https://github.com/celaldrg/llmslint/actions/workflows/ci.yml)
-[![Go Reference](https://pkg.go.dev/badge/github.com/celaldrg/llmslint.svg)](https://pkg.go.dev/github.com/celaldrg/llmslint)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+<p align="center">
+  <a href="https://github.com/celaldrg/llmslint/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/celaldrg/llmslint/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://pkg.go.dev/github.com/celaldrg/llmslint"><img alt="Go Reference" src="https://pkg.go.dev/badge/github.com/celaldrg/llmslint.svg"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <a href="https://github.com/celaldrg/llmslint/releases"><img alt="Release" src="https://img.shields.io/github/v/release/celaldrg/llmslint?sort=semver"></a>
+</p>
 
 **A linter for `llms.txt`, the file that tells AI agents where your docs are.**
 
 More and more sites publish an [`/llms.txt`](https://llmstxt.org): a Markdown file with a title, a one-paragraph summary and lists of links to clean Markdown pages, so coding agents and chat assistants can read the docs without scraping HTML. The format is small, but it is easy to get subtly wrong: a stray paragraph before the title, relative links that break once an agent fetches the file out of context, an `Optional` section that is not last, links that quietly 404.
 
 `llmslint` checks a file, a URL or a whole domain in one command, tells you what to fix with line numbers, and can fail CI when your `llms.txt` drifts. One static binary, no dependencies.
+
+<p align="center">
+  <img src="assets/terminal-demo.webp" alt="llmslint, real terminal output" width="860">
+  <br><sub>Real output: <code>llmslint testdata/bad.txt</code></sub>
+</p>
 
 ## Install
 
@@ -33,6 +43,11 @@ llmslint --strict llms.txt     # warnings fail too (exit 1)
 Exit codes: `0` clean (or warnings only), `1` errors found (or warnings with `--strict`), `2` the input could not be read.
 
 ## Example
+
+<p align="center">
+  <img src="assets/demo.gif" alt="llmslint running in a terminal" width="860">
+  <br><sub>Recorded with <a href="https://github.com/charmbracelet/vhs">vhs</a>.</sub>
+</p>
 
 A file with most of the usual mistakes ([`testdata/bad.txt`](testdata/bad.txt)):
 
